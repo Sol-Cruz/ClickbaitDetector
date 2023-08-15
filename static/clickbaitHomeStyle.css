@@ -1,0 +1,112 @@
+.about {
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+#grad {
+    background-image: linear-gradient(to top, #434343ff, 30%, white);
+    background-size: auto;
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+}
+
+.aboutLink {
+    text-decoration: none;
+}
+
+.aboutLink:visited {
+    color: black;
+}
+
+.aboutLink:hover {
+    color: red;
+}
+
+.analyzeButton {
+    background-color:red;
+    border: none;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 2%;
+}
+
+.analyzeButton:hover {
+    background-color: white;
+    color: red;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.homeTitle {
+    color: black;
+    font-family: 'Fjalla One', sans-serif;
+    text-decoration: none;
+}
+
+.homeTitle:hover {
+    color: red;
+}
+.inputBox {
+    background-color: #f2f2f2;
+    border: none;
+    color:#bbbbbb;
+    float: left;
+    font:18px/24px 'Nunito', sans-serif;
+    height: 25px;
+    margin-left: 150px;
+    padding: 2%;
+    text-align: center;
+    width: 60%;
+}
+
+.intro {
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+#predictions {
+    padding: 15px 15px 15px 150px;
+    text-align: center;
+    width: 71%;
+}
+
+#progressBar {
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    height: 30px;
+    text-align: center;
+    width: 0%;
+}
+
+#title {
+    padding: 15px 25px 15px 150px;
+    text-align: center;
+    width: 71%;
+}
+
+#thumbnail {
+    padding-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}

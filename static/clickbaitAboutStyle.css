@@ -1,0 +1,93 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.aboutTitle {
+    color: black;
+    font-family: 'Fjalla One', sans-serif;
+    text-decoration: none;
+}
+
+.aboutTitle:hover {
+    color: red;
+}
+
+.backButton {
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    position: fixed;
+    right: 0;
+    text-align: center;
+}
+
+.face {
+    background-size: contain;
+    float: left;
+    height: 100px;
+    max-width: 100px;
+}
+
+#grad {
+    background-image: linear-gradient(to bottom, #434343ff, 30%, white);
+    background-size: auto;
+    width: 100%; 
+    height: 100%; 
+    overflow: scroll;
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+}
+
+.homeLink {
+    text-decoration: none;
+}
+
+.homeLink:visited {
+    color: black;
+}
+
+.homeLink:hover {
+    color: red;
+}
+
+.img {
+    height: 100px;
+    width: 100px;
+}
+
+/*
+HTML 5 Template Name: 
+File: About Us - 10 CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#about-us{display:block; width:100%; line-height:1.6em;}
+
+#about-us #about-intro{margin-bottom:10px; text-align:center; font-size: 14px}
+#about-us #about-intro p{margin:20px 0 0 0; padding:0;}
+#about-us #about-intro p:first-child{margin-top:0;}
+
+#about-us #team{margin-bottom:0px; text-align:center;}
+#about-us #team ul{margin:0; padding:0; list-style:none; text-align:center;}
+#about-us #team ul li{margin-bottom:0; padding-bottom:20px;}
+#about-us #team ul li figure{}
+#about-us #team ul li figure img{}
+#about-us #team ul li figure figcaption{}
+#about-us #team ul li p{margin:10px 0 0 0; padding:0;}
+#about-us #team ul li p:first-child{}
+#about-us #team ul li figure figcaption .team_name{font-weight:bold;}
+#about-us #team ul li figure figcaption .team_title{margin:0; font-size:11px; line-height:normal;}
+#about-us #team ul li figure figcaption .team_description{font-size:10px;}
+#about-us #team ul ul{margin-top:10px;}
+#about-us #team ul ul li{display:inline; margin:0 0 0 6px; padding:0; border:none;}
+#about-us #team ul ul li:first-child{margin-left:0;}
+#about-us #team ul ul li a{}
+#about-us #team ul ul li a img{margin:0;}

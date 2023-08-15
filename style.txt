@@ -1,0 +1,28 @@
+Back-end:
+Python:
+No whitespace after a line of code ends
+Need a new line at the end of file
+Each line should contain less than 50 characters
+Docstrings for methods
+Proper indentation: 4 spaces for one indentation
+Standard imports first, then third-party libraries, then local imports
+Meaningful variable name
+
+Front-end:
+CSS file:
+List elements and their styles in alphabetical order by element name (ex: .inputBox, .p)
+Within sections, list attributes to be specified in alphabetical order as well (ex: color, font, height, width)
+
+HTML file:
+proper indentations
+each time a new element is introduced, indent
+</ > tags on their own line
+put all style specifications in a CSS file
+
+General front-end:
+Have separate HTML/CSS files for each page on our web applications
+ex: one set for Home page, one for About page, etc.
+file naming conventions:
+camel case
+clickbait<name of page>.html
+clickbait<name of page>Style.css

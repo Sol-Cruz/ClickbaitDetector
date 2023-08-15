@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel= "stylesheet" type= "text/css" href= "static/clickbaitAboutStyle.css">
+  <link rel="stylesheet" type="text/css" href="static/framework.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="grad">
+
+    <div class="header">
+      <h1>
+        <a href="/" title="Home" class="aboutTitle">
+          YouTube Clickbait Detector
+        </a>
+      </h1>
+    </div>
+
+    <div class="wrapper row2">
+      <div id="container" class="clear">
+        <!-- ####################################################################################################### -->
+        <div id="about-us" class="clear">
+          <!-- ####################################################################################################### -->
+          <section id="about-intro" class="clear">
+            <p>Social media users are bombarded on a daily basis by links to videos, each fishing for the attention of more viewers. Content creators often take to writing outrageous headlines and editing shocking video thumbnails in the hopes of increasing their view count. It can be difficult and time consuming for viewers to discern whether the contents of a video are indeed what the creator advertised, or if that video is clickbait. Using our two machine learning models, we are able to predict for our users whether a given YouTube video is clickbait.
+              Our models work as follows: To retrieve training data we wrote a Python script using the YouTube Data API, which allows us to download data about any YouTube video. We trained our models using sources that are known for uploading clickbait videos and others for uploading non-clickbait videos. 
+              We created a Clickbait Detector written to detect clickbait headlines using deep learning. The script is written in Python, using Keras and Tensorflow. This Clickbait Detector detects based on metadata, excluding thumbnails. The classification model used is Support Vector Machine. We also use Word2Vec model to transform title into vector representation. We use other video metadata in the prediction as they could potentially help the model to give a better prediction. In addition, the Clickbait Detector has an image classifier that uses a CNN model to do a binary classification of images. This classifier takes in a video’s thumbnail image and classifies it as clickbait or not clickbait. 
+              </p>
+          </section>
+          <!-- ####################################################################################################### -->
+          <section id="team">
+            <h2>Meet the team!</h2>
+            <ul class="clear">
+              <li class="one_fifth first">
+                <figure><img src="static/aom.png" alt="" width="100" height="100">
+                  <figcaption>
+                    <p class="team_name">Aom</p>
+                    <p class="team_title">Harvey Mudd College, Class of 2020</p>
+                    <p class="team_description">Aom Pongpiriyakarn (right in above photo) is a Computer Science major with an Economics concentration. She was born and raised in Bangkok, Thailand.</p>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="one_fifth">
+                <figure><img src="static/carrie.png" alt="" width="100" height="100">
+                  <figcaption>
+                    <p class="team_name">Carrie</p>
+                    <p class="team_title">Harvey Mudd College, Class of 2020</p>
+                    <p class="team_description">Carrie Yang is a joint major in CS and Math with a Korean concentration. She was born and raised in Nanjing, China.</p>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="one_fifth">
+                <figure><img src="static/erin.png" alt="" width="100" height="100">
+                  <figcaption>
+                    <p class="team_name">Erin</p>
+                    <p class="team_title">Harvey Mudd College, Class of 2020</p>
+                    <p class="team_description">Erin Jimenez is a Computer Science major with a Spanish concentration. She is from Morgan Hill, California (B A Y A R E A). She loves her pets, her friends, exercising, Spotify, referencing vines, and learning things that have nothing to do with CS.</p>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="one_fifth">
+                <figure><img src="static/julia.png" alt="" width="100" height="100">
+                  <figcaption>
+                    <p class="team_name">Julia</p>
+                    <p class="team_title">Scripps College, Class of 2020</p>
+                    <p class="team_description">Julia Pinedo is a Computer Science major, and Hispanic Studies minor. She is from Kirkland, Washington (whaddup, Costco) and desperately misses the rain. When not attending every single grutoring session, she enjoys listening to podcasts and writing original fiction.</p>
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="one_fifth">
+                <figure><img src="static/sol.png" alt="" width="100" height="100">
+                  <figcaption>
+                    <p class="team_name">Sol</p>
+                    <p class="team_title">Harvey Mudd College, Class of 2020</p>
+                    <p class="team_description">Sol Cruz is a Computer Science major with a concentration in Psychology. Born and raised in Fort Worth, Texas, she’s trying to get as far away from the heat as possible (but clearly failing). She loves crafting, listening to indie music, and learning new things through YouTube videos in her free time.</p>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <!-- ####################################################################################################### -->
+        </div>
+        <!-- ####################################################################################################### -->
+        <!-- ####################################################################################################### -->
+        <!-- ####################################################################################################### -->
+        <!-- ####################################################################################################### -->
+      </div>
+    </div>
+
+    <div class="backButton">
+      <a href="/" title="Home" class="homeLink">Home</a>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+
+  </script>
+
+</body>
+</html>

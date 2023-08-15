@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel= "stylesheet" type= "text/css" href= "static/clickbaitHomeStyle.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="grad">
+
+    <div class="header">
+      <h1>
+        <a href="/" title="Home" class="homeTitle">
+          YouTube Clickbait Detector
+        </a>
+      </h1>
+    </div>
+
+    <div style="color:gray">
+      <p class="intro">
+        This page allows you to determine whether a YouTube video is clickbait or not!
+        Just insert a link and we'll do the rest!
+      </p>
+      <textarea id="urlBox" class="inputBox" onclick="clearContents(this)">https://www.youtube.com/watch?v=6AYv6rV3NXE</textarea>
+      <button class="analyzeButton" onclick="apiRequest()"> Analyze! </button>
+    </div>
+    <div id="predictions">
+      <a id="videolink" href=""><img id="thumbnail" src="url" onerror="this.src='static/clickbait.png'"></a>    
+      <div id="title"></div>
+      <div id="progressBarContainer">
+        <div id="progressBar"></div>
+      </div> 
+    </div>
+    </div>
+  </div>
+
+  <!--<p id="predictions"> </p>-->
+  <div class="about">
+    <a href="/about" title="About" class="aboutLink">About Us!</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    // pass user-inputted url as string as data and get prediction result
+    function apiRequest() {
+      console.log("Making request ...");
+      var userUrl = document.getElementById("urlBox").value;
+      move()
+      $.ajax({
+        // Where are we sending the data?
+        method: "POST",
+        // url to send the request to
+        url: "/api/v1/classify",
+        // What is the data?
+        contentType: "application/json",
+        data: JSON.stringify(userUrl),
+        // What do we do with the response?
+        dataType: "json",
+        success: data => {
+          console.log("Got the prediction result!");
+          console.log(data);
+          prediction = data.predictions * 100;
+          document.getElementById("progressBarContainer").innerHTML = "";
+          $("#progressBarContainer").text("This video is " + prediction + "% likely to be clickbait");
+          $("#title").text("The video title: " + data.title);
+          document.getElementById("thumbnail").src = data.thumbnail
+          document.getElementById("videolink").href = data.videolink;
+        },
+        error: data => {
+          console.error("There was an error!");
+          console.error(data);
+          console.log(userUrl);
+          document.getElementById("progressBarContainer").innerHTML = "";
+          $("#progressBarContainer").text("There was an error! Please check the URL you inputted or try anotha one :~)");
+        }
+      })
+    }
+
+    function clearContents(element) {
+      element.value = '';
+    }
+
+    function move() {
+      var elem = document.getElementById("progressBar"); 
+      var width = 0;
+      var id = setInterval(frame, 30);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+        }
+      }
+    }
+
+  </script>
+
+</body>
+</html>
